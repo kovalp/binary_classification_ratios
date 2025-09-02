@@ -25,14 +25,24 @@ $$
 ## Usage
 
 There is a command-line utility `binary-classification-ratios`. The utility takes the 
-optional arguments `-tp`, `-tn`, `-fp`, and `-fn`, computes the popular binary-classification
-ratios such as Accuracy, Recall, Precision and F1-score and prints them to terminal.
+optional arguments <nobr>-tp</nobr>, <nobr>-tn</nobr>, <nobr>-fp</nobr>, and <nobr>-fn</nobr>,
+computes the popular binary-classification ratios such as Accuracy, Recall, Precision and 
+<nobr>F1-score</nobr> and prints them to terminal.
 
-The package is designed to be useful in other projects where the elements of the confusion matrix
-are known.
+```shell
+
+binary-classification-ratios -tp 10 -tn 20 -fp 30 -fn 40
+Confusion matrix: TP 10 TN 20 FP 30 FN 40
+     accuracy 0.300
+    precision 0.250
+       recall 0.200
+     f1-score 0.222
+```
+
+The package is designed to be useful in other Python projects where the elements of the confusion matrix
+are known
 
 ```python
-
 from binary_classification_ratios import BinaryClassificationRatios
 
 ratios = BinaryClassificationRatios(tp=10, tn=20, fp=30, fn=40)
@@ -44,11 +54,13 @@ ratios.assert_min(0.9, 0.8, 0.7)
 ## Install
 
 ```shell
+
 uv sync --no-dev
 ```
 or 
 
-```shell 
+```shell
+
 pip install binary-classification-ratios
 ```
 

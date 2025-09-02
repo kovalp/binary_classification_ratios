@@ -30,7 +30,7 @@ dev = [
 ]
 
 [project.scripts]
-binary-classificaion-ratios = "binary_classification_ratios.cli.run_bcr:main"
+binary-classification-ratios = "binary_classification_ratios.cli.main:main"
 
 [tool.uv]
 package = true
