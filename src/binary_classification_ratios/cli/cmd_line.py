@@ -1,7 +1,7 @@
 """."""
 
 from argparse import ArgumentParser
-from typing import Sequence
+from typing import Sequence, Union
 
 
 PROG = 'binary-classification-ratios'
@@ -17,7 +17,7 @@ class CmdLine:
         self.fn: int = 0
 
 
-def get_cmd_line(args: Sequence[str] | None = None) -> CmdLine:
+def get_cmd_line(args: Union[Sequence[str], None] = None) -> CmdLine:
     """."""
     parser = ArgumentParser(PROG, f'{PROG} [OPTIONS]')
     parser.add_argument('-tp', type=int, default=0, help='Number of true positives.')
