@@ -55,17 +55,5 @@ ratios.assert_min(0.9, 0.8, 0.7)
 
 ```shell
 
-uv sync --no-dev
-```
-or 
-
-```shell
-
 pip install binary-classification-ratios
 ```
-
-## Development install
-
-Please, consult the maintainers README.
-
-
