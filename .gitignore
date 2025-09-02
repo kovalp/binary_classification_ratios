@@ -5,3 +5,4 @@
 **__pycache__
 /.python-version
 /.coverage
+/src/binary_classification_ratios.egg-info/
