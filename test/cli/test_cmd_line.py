@@ -1,6 +1,6 @@
 """."""
 
-from binary_classification_ratios.cli.cmd_line import get_cmd_line, CmdLine
+from binary_classification_ratios.cli.cmd_line import CmdLine, get_cmd_line
 
 
 def test_cmd_line_short_args() -> None:
@@ -20,4 +20,3 @@ def test_cmd_line_no_args() -> None:
     assert cli.tn == 0
     assert cli.fn == 0
     assert cli.fp == 0
-    

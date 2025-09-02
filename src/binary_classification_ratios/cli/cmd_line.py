@@ -6,12 +6,15 @@ from typing import Sequence
 
 PROG = 'binary-classification-ratios'
 
+
 class CmdLine:
     """."""
-    tp: int = 0
-    tn: int = 0
-    fp: int = 0
-    fn: int = 0
+
+    def __init__(self) -> None:
+        self.tp: int = 0
+        self.tn: int = 0
+        self.fp: int = 0
+        self.fn: int = 0
 
 
 def get_cmd_line(args: Sequence[str] | None = None) -> CmdLine:

@@ -1,8 +1,10 @@
 """."""
+
 from typing import Sequence
 
-from .cmd_line import get_cmd_line
 from binary_classification_ratios import BinaryClassificationRatios
+
+from .cmd_line import get_cmd_line
 
 
 def run(args: Sequence[str] | None = None) -> float:
