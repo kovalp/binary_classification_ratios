@@ -1,7 +1,6 @@
 # Binary classification ratios
 
-<img src="assets/logo-binary-classification-ratios.svg" alt="logo-binary-classification-ratios" width="96">
-<img src="https://github.com/kovalp/binary_classification_ratios/blob/main/assets/logo-binary-classification-ratios.svg" alt="logo-binary-classification-ratios" width="96">
+<img src="https://raw.githubusercontent.com/kovalp/binary_classification_ratios/main/assets/logo-binary-classification-ratios.svg" alt="logo-binary-classification-ratios" width="96">
 
 The package helps computing the quality metrics (ratios) arising in the binary classification.
 The binary classification is given by the confusion matrix. The confusion matrix is given
