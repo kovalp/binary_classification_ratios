@@ -1,6 +1,7 @@
 # Binary classification ratios
 
 <img src="assets/logo-binary-classification-ratios.svg" alt="logo-binary-classification-ratios" width="96">
+<img src="https://github.com/kovalp/binary_classification_ratios/blob/main/assets/logo-binary-classification-ratios.svg" alt="logo-binary-classification-ratios" width="96">
 
 The package helps computing the quality metrics (ratios) arising in the binary classification.
 The binary classification is given by the confusion matrix. The confusion matrix is given
@@ -26,8 +27,7 @@ $$
 
 There is a command-line utility `binary-classification-ratios`. The utility takes the 
 optional arguments `-tp`, `-tn`, `-fp`, and `-fn`, computes the popular binary-classification
-ratios such as $\mathrm{Accuracy}$, $\mathrm{Recall}$, $\mathrm{Precision}$ and 
-$\mathrm{F1-score}$ and prints them to terminal.
+ratios such as Accuracy, Recall, Precision and F1-score and prints them to terminal.
 
 The package is designed to be useful in other projects where the elements of the confusion matrix
 are known.
