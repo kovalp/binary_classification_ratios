@@ -42,10 +42,6 @@ print(ratios.get_summary())
 ratios.assert_min(0.9, 0.8, 0.7)
 ```
 
-## Development install
-
-Please, consult the maintainers README.
-
 ## Install
 
 ```shell
@@ -57,5 +53,8 @@ or
 pip install binary-classification-ratios
 ```
 
+## Development install
+
+Please, consult the maintainers README.
 
 
