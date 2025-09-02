@@ -25,9 +25,9 @@ $$
 ## Usage
 
 There is a command-line utility `binary-classification-ratios`. The utility takes the 
-optional arguments <nobr>-tp</nobr>, <nobr>-tn</nobr>, <nobr>-fp</nobr>, and <nobr>-fn</nobr>,
+optional arguments &nbsp;-tp, &nbsp;-tn, &nbsp;-fp, and &nbsp;-fn,
 computes the popular binary-classification ratios such as Accuracy, Recall, Precision and 
-<nobr>F1-score</nobr> and prints them to terminal.
+F1-score and prints them to terminal.
 
 ```shell
 
