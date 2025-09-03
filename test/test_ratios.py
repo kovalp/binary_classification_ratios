@@ -32,13 +32,25 @@ def test_get_summary(bcr: BinaryClassificationRatios) -> None:
     """."""
     assert (
         bcr.get_summary()
-        == """Confusion matrix: TP 10 TN 9 FP 8 FN 7
-     accuracy 0.559
+        == """Confusion matrix TP 10 TN 9 FP 8 FN 7
+     accuracy 0.55882
     precision 0.556
        recall 0.588
-     f1-score 0.571
-"""
+     f1-score 0.571"""
     )
+
+
+def test_get_summary_dct(bcr: BinaryClassificationRatios) -> None:
+    """."""
+    dct = bcr.get_summary_dct()
+    assert dct['tp'] == 10
+    assert dct['tn'] == 9
+    assert dct['fp'] == 8
+    assert dct['fn'] == 7
+    assert dct['accuracy'] == pytest.approx(0.5588235294117647)
+    assert dct['precision'] == pytest.approx(0.5555555555555556)
+    assert dct['recall'] == pytest.approx(0.5882352941176471)
+    assert dct['f1_score'] == pytest.approx(0.5714285714285715)
 
 
 def test_assert_min(bcr: BinaryClassificationRatios) -> None:
