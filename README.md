@@ -32,8 +32,8 @@ F1-score and prints them to terminal.
 ```shell
 
 binary-classification-ratios -tp 10 -tn 20 -fp 30 -fn 40
-Confusion matrix: TP 10 TN 20 FP 30 FN 40
-     accuracy 0.300
+Confusion matrix TP 10 TN 20 FP 30 FN 40
+     accuracy 0.30000
     precision 0.250
        recall 0.200
      f1-score 0.222

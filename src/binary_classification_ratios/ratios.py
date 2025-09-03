@@ -3,6 +3,10 @@ This module provides the `BinaryClassificationRatios` class, which is used to ca
 and summarize classification metrics such as accuracy, precision, recall, and F1-score.
 """
 
+from typing import Dict, Union
+
+from binary_classification_ratios.summary import BinaryClassificationSummary
+
 
 class BinaryClassificationRatios(object):
     """
@@ -21,6 +25,7 @@ class BinaryClassificationRatios(object):
         self.tn = tn
         self.fp = fp
         self.fn = fn
+        self.summary = BinaryClassificationSummary()
 
     def get_summary(self) -> str:
         """Return a summary of the classification metrics, including accuracy,
@@ -29,14 +34,21 @@ class BinaryClassificationRatios(object):
         Returns:
             str: A formatted string summarizing the classification metrics.
         """
-        cc = self
-        return (
-            f'Confusion matrix: TP {cc.tp} TN {cc.tn} FP {cc.fp} FN {cc.fn}\n'
-            f'     accuracy {cc.get_accuracy():.3f}\n'
-            f'    precision {cc.get_precision():.3f}\n'
-            f'       recall {cc.get_recall():.3f}\n'
-            f'     f1-score {cc.get_f1_score():.3f}\n'
-        )
+        dct = self.get_summary_dct()
+        return self.summary.get_summary(dct)
+
+    def get_summary_dct(self) -> Dict[str, Union[int, float]]:
+        """."""
+        return {
+            'tp': self.tp,
+            'tn': self.tn,
+            'fp': self.fp,
+            'fn': self.fn,
+            'accuracy': self.get_accuracy(),
+            'precision': self.get_precision(),
+            'recall': self.get_recall(),
+            'f1_score': self.get_f1_score(),
+        }
 
     def get_precision(self) -> float:
         """Calculate the Precision.
