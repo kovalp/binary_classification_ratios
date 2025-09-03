@@ -1,6 +1,6 @@
 # Binary classification ratios
 
-<img src="assets/logo-binary-classification-ratios.svg" alt="logo-binary-classification-ratios" width="96">
+<img src="https://raw.githubusercontent.com/kovalp/binary_classification_ratios/main/assets/logo-binary-classification-ratios.svg" alt="logo-binary-classification-ratios" width="96">
 
 The package helps computing the quality metrics (ratios) arising in the binary classification.
 The binary classification is given by the confusion matrix. The confusion matrix is given
@@ -25,15 +25,24 @@ $$
 ## Usage
 
 There is a command-line utility `binary-classification-ratios`. The utility takes the 
-optional arguments `-tp`, `-tn`, `-fp`, and `-fn`, computes the popular binary-classification
-ratios such as $\mathrm{Accuracy}$, $\mathrm{Recall}$, $\mathrm{Precision}$ and 
-$\mathrm{F1-score}$ and prints them to terminal.
+optional arguments &nbsp;-tp, &nbsp;-tn, &nbsp;-fp, and &nbsp;-fn,
+computes the popular binary-classification ratios such as Accuracy, Recall, Precision and 
+F1-score and prints them to terminal.
 
-The package is designed to be useful in other projects where the elements of the confusion matrix
-are known.
+```shell
+
+binary-classification-ratios -tp 10 -tn 20 -fp 30 -fn 40
+Confusion matrix: TP 10 TN 20 FP 30 FN 40
+     accuracy 0.300
+    precision 0.250
+       recall 0.200
+     f1-score 0.222
+```
+
+The package is designed to be useful in other Python projects where the elements of the confusion matrix
+are known
 
 ```python
-
 from binary_classification_ratios import BinaryClassificationRatios
 
 ratios = BinaryClassificationRatios(tp=10, tn=20, fp=30, fn=40)
@@ -42,20 +51,9 @@ print(ratios.get_summary())
 ratios.assert_min(0.9, 0.8, 0.7)
 ```
 
-## Development install
-
-Please, consult the maintainers README.
-
 ## Install
 
 ```shell
-uv sync --no-dev
-```
-or 
 
-```shell 
 pip install binary-classification-ratios
 ```
-
-
-
