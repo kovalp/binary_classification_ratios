@@ -21,6 +21,8 @@ class BinaryClassificationRatios(object):
         self.tn = tn
         self.fp = fp
         self.fn = fn
+        self.accuracy_fmt = '.5f'
+        self.fmt = '.3f'
 
     def get_summary(self) -> str:
         """Return a summary of the classification metrics, including accuracy,
@@ -32,10 +34,10 @@ class BinaryClassificationRatios(object):
         cc = self
         return (
             f'Confusion matrix: TP {cc.tp} TN {cc.tn} FP {cc.fp} FN {cc.fn}\n'
-            f'     accuracy {cc.get_accuracy():.3f}\n'
-            f'    precision {cc.get_precision():.3f}\n'
-            f'       recall {cc.get_recall():.3f}\n'
-            f'     f1-score {cc.get_f1_score():.3f}\n'
+            f'     accuracy {cc.get_accuracy():{self.accuracy_fmt}}\n'
+            f'    precision {cc.get_precision():{self.fmt}}\n'
+            f'       recall {cc.get_recall():{self.fmt}}\n'
+            f'     f1-score {cc.get_f1_score():{self.fmt}}\n'
         )
 
     def get_precision(self) -> float:

@@ -34,3 +34,8 @@ binary-classification-ratios = "binary_classification_ratios.cli.main:main"
 
 [tool.uv]
 package = true
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
