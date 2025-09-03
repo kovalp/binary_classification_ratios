@@ -5,8 +5,9 @@ from binary_classification_ratios.cli.cmd_line import CmdLine, get_cmd_line
 
 def test_cmd_line_short_args() -> None:
     """."""
-    cli = get_cmd_line(['-tp', '1', '-tn', '2', '-fp', '3', '-fn', '4',
-                        '--fmt', '.4f', '--accuracy-fmt', '.6f'])
+    cli = get_cmd_line(
+        ['-tp', '1', '-tn', '2', '-fp', '3', '-fn', '4', '--fmt', '.4f', '--accuracy-fmt', '.6f']
+    )
     assert isinstance(cli, CmdLine)
     assert cli.tp == 1
     assert cli.tn == 2
