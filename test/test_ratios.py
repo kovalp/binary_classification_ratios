@@ -11,13 +11,22 @@ def bcr() -> BinaryClassificationRatios:
     return BinaryClassificationRatios(tp=10, tn=9, fp=8, fn=7)
 
 
-def test_classification_ratios_init() -> None:
+def test_no_args_init() -> None:
     """."""
     bcr = BinaryClassificationRatios()
     assert bcr.get_f1_score() == pytest.approx(0.0)
     assert bcr.get_precision() == pytest.approx(0.0)
     assert bcr.get_recall() == pytest.approx(0.0)
     assert bcr.get_accuracy() == pytest.approx(0.0)
+
+
+def test_convert_to_int() -> None:
+    """."""
+    bcr = BinaryClassificationRatios(tp=10.0, tn=9.0, fp=8.0, fn=7.0)
+    assert isinstance(bcr.tp, int)
+    assert isinstance(bcr.tn, int)
+    assert isinstance(bcr.fp, int)
+    assert isinstance(bcr.fn, int)
 
 
 def test_classification_ratios_meaningful(bcr: BinaryClassificationRatios) -> None:

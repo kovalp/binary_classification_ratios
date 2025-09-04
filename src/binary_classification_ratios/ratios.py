@@ -3,7 +3,7 @@ This module provides the `BinaryClassificationRatios` class, which is used to ca
 and summarize classification metrics such as accuracy, precision, recall, and F1-score.
 """
 
-from typing import Dict, Union
+from typing import Any, Dict, Union
 
 from binary_classification_ratios.summary import BinaryClassificationSummary
 
@@ -19,12 +19,12 @@ class BinaryClassificationRatios(object):
         fn: Number of false negatives.
     """
 
-    def __init__(self, *, tp: int = 0, tn: int = 0, fp: int = 0, fn: int = 0) -> None:
+    def __init__(self, *, tp: Any = 0, tn: Any = 0, fp: Any = 0, fn: Any = 0) -> None:
         """Initializes a new instance with all zero values."""
-        self.tp = tp
-        self.tn = tn
-        self.fp = fp
-        self.fn = fn
+        self.tp = int(tp)
+        self.tn = int(tn)
+        self.fp = int(fp)
+        self.fn = int(fn)
         self.summary = BinaryClassificationSummary()
 
     def get_summary(self) -> str:
