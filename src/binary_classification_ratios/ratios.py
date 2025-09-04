@@ -21,10 +21,10 @@ class BinaryClassificationRatios(object):
 
     def __init__(self, *, tp: int = 0, tn: int = 0, fp: int = 0, fn: int = 0) -> None:
         """Initializes a new instance with all zero values."""
-        self.tp = tp
-        self.tn = tn
-        self.fp = fp
-        self.fn = fn
+        self.tp = int(tp)
+        self.tn = int(tn)
+        self.fp = int(fp)
+        self.fn = int(fn)
         self.summary = BinaryClassificationSummary()
 
     def get_summary(self) -> str:
